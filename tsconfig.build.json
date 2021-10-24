@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "src/index.tsx",
+    "src/App.tsx",
+    "src/reportWebVitals.ts",
+    "src/setupTests.ts",
+    "src/**/*.test.js",
+    "src/**/*.test.js",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "noEmit": false,
+    "declaration": true,
+    "outDir": "lib"
+  }
+}
