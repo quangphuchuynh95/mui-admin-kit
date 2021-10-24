@@ -1,8 +1,13 @@
 {
-  "name": "mui-admin-kit",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@mui-admin-kit/core",
+  "version": "0.0.25",
+  "main": "lib.js",
+  "types": "lib.d.ts",
+  "license": "MIT",
   "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,16 +15,19 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
+    "@types/yargs": "^17.0.4",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yargs": "^17.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "lib:build": "rm -rf lib && tsc -b tsconfig.build.json && cp package.json lib/package.json",
+    "lib:test": "react-scripts test",
+    "scripts:watch": "tsc -b tsconfig.script.json --watch",
+    "scripts:build": "tsc -b tsconfig.script.json",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
